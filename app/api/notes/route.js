@@ -18,3 +18,9 @@ export async function POST(req) {
         return NextResponse.json({ error: "Failed to save note" }, { status: 500 });
     }
 }
+
+export async function GET() {
+    await connectDB();
+    const notes = await Notes.find();
+    return NextResponse.json(notes)
+}
