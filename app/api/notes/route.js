@@ -7,9 +7,9 @@ export async function POST(req) {
     try {
         await connectDB(); // ✅ Connect to DB
 
-        const { content } = await req.json(); // ✅ Expect "content" from frontend
+        const { content, writer } = await req.json(); // ✅ Expect "content" from frontend
 
-        const newNote = await Notes.create({ content }); // ✅ Save note
+        const newNote = await Notes.create({ content, writer }); // ✅ Save note
         return NextResponse.json({ message: "Note saved successfully!", note: newNote });
     } catch (error) {
         console.error("Error saving note:", error);
