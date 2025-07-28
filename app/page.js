@@ -9,6 +9,7 @@ export default function Home() {
 
   const handlesubmit = async (e) => {
     console.log(form)
+    console.log(author)
 
     e.preventDefault(); //prevents the page to reload again 
 

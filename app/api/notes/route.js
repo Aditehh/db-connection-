@@ -8,6 +8,8 @@ export async function POST(req) {
         await connectDB(); // ✅ Connect to DB
 
         const { content, writer } = await req.json(); // ✅ Expect "content" from frontend
+        console.log("Received content:", content);
+        console.log("Received writer:", writer);
 
         const newNote = await Notes.create({ content, writer }); // ✅ Save note
         return NextResponse.json({ message: "Note saved successfully!", note: newNote });
