@@ -14,7 +14,7 @@ export async function POST(req) {
         console.error("Error saving note:", error);
         return NextResponse.json({ error: "Failed to save note" }, { status: 500 });
     }
-}
+}   
 
 export async function GET() {
     await connectDB();

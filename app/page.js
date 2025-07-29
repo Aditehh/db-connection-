@@ -26,9 +26,12 @@ export default function Home() {
     catch (error) {
       console.log("nono")
     }
+
+    setauthor("")
+    setform("")
   }
 
-  
+
 
 
 
@@ -56,7 +59,7 @@ export default function Home() {
             </button>
           </div>
 
-        
+
         </form>
 
 
