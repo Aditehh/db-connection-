@@ -28,12 +28,9 @@ export default function Home() {
     }
   }
 
-  const handledelete = async () => {
-    const res = await fetch("/api/notes/[id]", {
-      method: "DELETE"
-    });
+  
 
-  }
+
 
   return (
     <>
@@ -58,18 +55,10 @@ export default function Home() {
               save
             </button>
           </div>
+
+        
         </form>
-        <div>
 
-
-
-          <div>
-            <button onClick={handledelete}>
-              delete
-            </button>
-          </div>
-
-        </div>
 
 
       </div>
