@@ -38,8 +38,8 @@ export default function Home() {
       const res = await fetch("api/notes")
       const data = await res.json();
       setnotes(data)
-
-    }
+    };
+    fetchNotes();
 
 
   }, [])
