@@ -6,6 +6,7 @@ export default function Home() {
 
   const [form, setform] = useState("")
   const [author, setauthor] = useState("")
+  const [notes, setnotes] = useState([])
 
   const handlesubmit = async (e) => {
     console.log(form)
@@ -30,6 +31,19 @@ export default function Home() {
     setauthor("")
     setform("")
   }
+
+  useEffect(() => {
+    const fetchNotes = async () => {
+
+      const res = await fetch("api/notes")
+      const data = await res.json();
+      setnotes(data)
+
+    }
+
+
+  }, [])
+
 
 
 
