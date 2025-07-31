@@ -29,7 +29,7 @@ export default function Home() {
     // }
 
     const newNote = await res.json();
-    setnotes([newNote, ...notes])
+    setnotes([data.note, ...notes])
     setauthor("")
     setform("")
     console.log(notes)
@@ -76,14 +76,14 @@ export default function Home() {
 
         <div>
 
-          {/* <ul>
-            {notes.map((note) => (
-              <li key={index} className="border p-2 my-2">
+            <ul>
+            {notes.map((note, _id) => (
+              <li key={_id} className="border p-2 my-2">
                 <p className="font-semibold">{note.content}</p>
                 <p className="text-sm text-gray-500">— {note.writer}</p>
               </li>
             ))}
-          </ul> */}
+          </ul> 
 
         </div>
 
